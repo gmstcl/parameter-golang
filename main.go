@@ -34,8 +34,8 @@ func main() {
 func RunNewHttpServer() {
 	addr := fmt.Sprintf(":%d", *port)
 	log.Printf("Server is listening %d", *port)
-	http.HandleFunc("/ping", func(w http.ResponseWriter, req *http.Request) {
-		if _, err := w.Write([]byte("PingPong by net/http\n")); err != nil {
+	http.HandleFunc("/check", func(w http.ResponseWriter, req *http.Request) {
+		if _, err := w.Write([]byte("by net/http\n")); err != nil {
 			log.Print(err)
 		}
 	})
