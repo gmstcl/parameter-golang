@@ -5,4 +5,4 @@ WORKDIR /user/src/app
 COPY main .
 RUN chmod +x main
 
-# CMD ["./main","http"]
+CMD ["./main","http"]
